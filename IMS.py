@@ -1,7 +1,8 @@
 #!/usr/bin/python
 import urllib2
 import re
-import subprocess 
+import subprocess
+## edit here ur roll no and other details if want automatic notify-popup
 Rollno="1314310838"#raw_input("Enter Roll No: ")
 Branch="2cs"#raw_input("Enter Branch: ")
 Year="4"#raw_input("Enter Subyear: ")
@@ -12,15 +13,15 @@ feh = urllib2.urlopen(u).read()
 f=re.findall(r'(?<!\-)\b(\d\d\d|\d\d|\d)\b', feh)
 #print f
 d={}
-d[0]="Aptitude" 	
-d[1]="Distributed Systems" 	
-d[2]="Artificial Intelligence" 	
-d[3]="Software Project Management" 	
-d[4]="OPEN ELECTIVE -I COMPUTER VISION" 	
-d[5]="Cryptography & Network Security" 	
-d[6]="Distributed Systems Lab" 	
-d[7]="Project Lab" 	
-d[8]="Industrial Training Viva" 	
+d[0]="Aptitude"
+d[1]="Distributed Systems"
+d[2]="Artificial Intelligence"
+d[3]="Software Project Management"
+d[4]="OPEN ELECTIVE -I COMPUTER VISION"
+d[5]="Cryptography & Network Security"
+d[6]="Distributed Systems Lab"
+d[7]="Project Lab"
+d[8]="Industrial Training Viva"
 l=[]
 	#l.append((f[-10],f[-9])
 try:
@@ -47,13 +48,13 @@ try:
 			sendmessage(xx)
 		print("--------------------------------------")
 		print("                                      ")
-		print "Total Attendence is: {}%".format(f[-6])	
+		print "Total Attendence is: {}%".format(f[-6])
 		print "total lectures {}/{}".format(f[-8],f[-7])
 		print("                                      ")
 		print("--------------------------------------")
 except:
 		print("--------------------------------------")
-		print("                                      ")	
+		print("                                      ")
 		print "Unable to Help !! Sorry for Inconvience :("
 		print("                                      ")
 		print("--------------------------------------")
@@ -101,6 +102,3 @@ except:
 	end
 end
 '''
-
-
-
