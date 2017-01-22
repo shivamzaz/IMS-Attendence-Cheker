@@ -10,6 +10,7 @@ Year="4"#raw_input("Enter Subyear: ")
 #u="http://118.102.164.133/cull2016odd_webshow.jsp?roll=1314310838&subbranch=2CS&subyear=4&att=Theory&batch=All"
 u="http://118.102.164.133/cull2016odd_webshow.jsp?roll="+Rollno+"&subbranch="+Branch.upper()+"&subyear="+Year+"&att=Theory&batch=All"
 feh = urllib2.urlopen(u).read()
+print "hello"
 f=re.findall(r'(?<!\-)\b(\d\d\d|\d\d|\d)\b', feh)
 #print f
 d={}
